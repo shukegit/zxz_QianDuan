@@ -1,4 +1,22 @@
 $(function() {
+	var flag = true;
+	/*首页切换图片*/
+	function change_img() {
+		if(flag == true) {
+			$(".main_page_background").css("opacity", "0");
+    		$(".main_page_background").css("background-image", "url(img/f75209df96d9084fec5d4fa932def3ff.jpg)");
+    		$(".main_page_background").animate({opacity : '1'}, 1000);
+    		flag = false;
+		} else {
+			$(".main_page_background").css("opacity", "0");
+    		$(".main_page_background").css("background-image", "url(img/Work-Hard-Play-Harder-.jpg)");
+    		$(".main_page_background").animate({opacity : '1'}, 1000);
+    		flag = true;
+		}
+	}
+	setInterval(change_img, 5000);
+	
+	
 	/*滑动到顶部*/
 	$.scrollUp({
 	    scrollName : "goto_toppest",
@@ -16,7 +34,7 @@ $(function() {
 		
  	});
  	$(".tab_li02").click(function() {
- 		alert(2);
+   		alert(2);
  	});
  	$(".tab_li03").click(function() {
  		alert(3);
@@ -51,13 +69,13 @@ $(function() {
     		$(".main_page_background").css("filter", "blur(0px)");
     	}
     	//设置标题栏
-    	if($(document).scrollTop() > 0) {
-//  		alert(1);
-    		$(".tab_ul").css("margin-top", "30px");
-    	} else {
-    		$(".tab_ul").css("margin-top", "40px");
-    	}
-    	
+//  	if($(document).scrollTop() > 0) {			
+//  		$(".tab_ul").css("margin-top", "25px");
+//// 			$(".tab_ul").animate({marginTop : '25px'}, 500);
+//  	} else {	
+//  		$(".tab_ul").css("margin-top", "45px");
+//// 			$(".tab_ul").animate({marginTop : '45px'}, 500);
+//  	}
     });
 
 });

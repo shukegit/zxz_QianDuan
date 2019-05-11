@@ -22,7 +22,8 @@
 .tab_ul {
 	width: 530px;
 	margin: auto;
-	margin-top: 40px;
+	margin-top: 35px;
+	margin-bottom: 10px;
 	/*border: 1px solid black;*/
 }
 .tab_ul li{
@@ -39,7 +40,7 @@
 }
 /*首页背景*/
 .main_page_background {
-	background-image: url(../img/f75209df96d9084fec5d4fa932def3ff.jpg);
+	background-image: url(../img/Work-Hard-Play-Harder-.jpg);
 	background-attachment: fixed;/*固定图片*/
 	background-size: cover;
 	width: 100%;
@@ -68,6 +69,9 @@
 	margin-top: 650px;
 	cursor: pointer;
 	visibility: hidden;
+}
+.main_img_next_btn:hover {
+	background-color: white;
 }
 
 
