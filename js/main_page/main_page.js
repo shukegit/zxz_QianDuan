@@ -1,4 +1,7 @@
 $(function() {
+	var top = $(window).height();
+	$(".tab").css("margin-top", top);
+	
 	var flag = true;
 	/*首页切换图片*/
 	function change_img() {
@@ -43,24 +46,21 @@ $(function() {
  	});
  	$(".tab_li01").click(function() {
 		/*跳转到第一个栏目所在的位置*/
-		$("html,body").animate({scrollTop:$(".second_div").offset().top},1000);
+		$("html,body").animate({scrollTop:$(".first_div").offset().top},1000);
 		
  	});
  	$(".tab_li02").click(function() {
-// 		alert(2);
-		alert($(window).height());
-		alert($(document.body).height());
-		alert($(document).height());
+
+		$("html,body").animate({scrollTop:$(".second_div").offset().top},1000);
  	});
  	$(".tab_li03").click(function() {
-// 		alert(3);
-		alert($(document.body).outerHeight(true));
+		$("html,body").animate({scrollTop:$(".third_div").offset().top},1000);
  	});
 	$(".tab_li04").click(function() {
- 		alert(4);
+ 		$("html,body").animate({scrollTop:$(".forth_div").offset().top},1000);
  	});
  	$(".tab_li05").click(function() {
- 		alert(5);
+ 		$("html,body").animate({scrollTop:$(".fifth_div").offset().top},1000);
  	});
  	$(".tab_li05").hover(function() {
  		$(".main_page_background").css("filter", "blur(1px)");
@@ -86,6 +86,13 @@ $(function() {
     		$(".main_page_background").css("filter", "blur(0px)");
     	}
     	//设置标题栏
+    	var height = $(window).height();
+    	var x = $(document).scrollTop();
+    	if(x > height) {
+//  		alert("yes");
+			$(".tab").css("margin-top", x);
+//			$(".tab").css("position", "fixed");
+    	}
 //  	if($(document).scrollTop() > 0) {			
 //  		$(".tab_ul").css("margin-top", "25px");
 //// 			$(".tab_ul").animate({marginTop : '25px'}, 500);
