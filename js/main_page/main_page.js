@@ -1,9 +1,9 @@
 $(function() {
-	var top = $(window).height();
-	$(".tab").css("margin-top", top);
 	
-	var flag = true;
-	/*首页切换图片*/
+	var flag = true;//判断导航栏是否返回的flag
+	/*
+	 * 首页切换图片
+	 * */
 	function change_img() {
 		if(flag == true) {
 			$(".main_page_background").css("opacity", "0");
@@ -18,9 +18,10 @@ $(function() {
 		}
 	}
 	setInterval(change_img, 5000);
-	//设置首页图片、文字高度适应不同屏幕大小
-	function adapt_screen() {
-		
+	/*
+	 * 设置首页图片、文字高度适应不同屏幕大小
+	 */	
+	function adapt_screen() {		
 		var height = $(window).height();//浏览器显示内容的高度(从网址栏下面到开始菜单上面的部分)
 		$(".main_page_background").css("height", height + "px");//调整背景图片
 		$(".main_page_content").css("height", height + "px");//调整遮罩层
@@ -29,11 +30,14 @@ $(function() {
 		$(".main_img_next_btn").css("margin-top",height + "px");
 		height = Math.floor(height / 200) * 100
 		$(".main_page_font").css("margin-top", height + "px");//设置文字高度
+		$(".tab").css("margin-top", top);//设置导航栏的位置
 	}
 	adapt_screen();
 	
 	
-	/*侧边的方框用于滑动到顶部*/
+	/*
+	 * 侧边的方框用于滑动到顶部
+	 */
 	$.scrollUp({
 	    scrollName : "goto_toppest",
         topDistance : "300",
@@ -44,40 +48,49 @@ $(function() {
         scrollText : "Scroll to top",
         activeOverlay : false
  	});
+ 	/**
+ 	 * 因为tab的高度为100px所以少移动tab的高度的距离
+ 	 */
  	$(".tab_li01").click(function() {
 		/*跳转到第一个栏目所在的位置*/
-		$("html,body").animate({scrollTop:$(".first_div").offset().top},1000);
-		
+		$("html,body").animate({scrollTop:$(".first_div").offset().top + 1},1000);
  	});
  	$(".tab_li02").click(function() {
-
-		$("html,body").animate({scrollTop:$(".second_div").offset().top},1000);
+		$("html,body").animate({scrollTop:$(".second_div").offset().top - 99},1000);
  	});
  	$(".tab_li03").click(function() {
-		$("html,body").animate({scrollTop:$(".third_div").offset().top},1000);
+		$("html,body").animate({scrollTop:$(".third_div").offset().top - 99},1000);
  	});
 	$(".tab_li04").click(function() {
- 		$("html,body").animate({scrollTop:$(".forth_div").offset().top},1000);
+ 		$("html,body").animate({scrollTop:$(".forth_div").offset().top - 99},1000);
  	});
  	$(".tab_li05").click(function() {
- 		$("html,body").animate({scrollTop:$(".fifth_div").offset().top},1000);
+ 		$("html,body").animate({scrollTop:$(".fifth_div").offset().top - 99},1000);
  	});
  	$(".tab_li05").hover(function() {
  		$(".main_page_background").css("filter", "blur(1px)");
  	}, function() {
  		$(".main_page_background").css("filter", "blur(0px)");
  	});
- 	/*设置点击主页上的箭头滑动到下一个栏目*/
+ 	
+ 	/* 
+ 	 * 设置点击主页上的箭头滑动到下一个栏目
+	 */
 	$(".main_img_next_btn").click(function() {
  		/*滚动到指定位置*/
- 		$("html,body").animate({scrollTop:$(".second_div").offset().top},1000);
+ 		$("html,body").animate({scrollTop:$(".first_div").offset().top},1000);
  	});
  	/*设置主页上的箭头延时两秒出现*/
- 	setTimeout(function() {
- 		$(".main_img_next_btn").css('visibility','visible');//元素显示
- 	}, 2000);
- 	//鼠标滚动触发
+// 	setTimeout(function() {
+// 		$(".main_img_next_btn").css('visibility','visible');//元素显示
+// 	}, 2000);
+ 	
+ 	/**
+ 	 * 鼠标滚动触发
+ 	 */
+ 	var flagTab = false;
     $(window).on('scroll',function() {
+    	//设置背景图片模糊
     	if($(document).scrollTop() < 600) {
     		var x = $(document).scrollTop() / 100 + 1;
     		$(".main_page_background").css("filter", "blur(" + x + "px)");
@@ -89,17 +102,21 @@ $(function() {
     	var height = $(window).height();
     	var x = $(document).scrollTop();
     	if(x > height) {
-//  		alert("yes");
-			$(".tab").css("margin-top", x);
-//			$(".tab").css("position", "fixed");
+    		flagTab = true;
+			$(".tab").css({"position": "fixed", "left": 0, "top": 0, "margin-top": 0});
+    	} 
+    	if(flagTab == true && x <= height) {
+    		$(".tab").css({"margin-top": height, "position": "absolute"});
     	}
-//  	if($(document).scrollTop() > 0) {			
-//  		$(".tab_ul").css("margin-top", "25px");
-//// 			$(".tab_ul").animate({marginTop : '25px'}, 500);
-//  	} else {	
-//  		$(".tab_ul").css("margin-top", "45px");
-//// 			$(".tab_ul").animate({marginTop : '45px'}, 500);
-//  	}
     });
-
+    
+	
+	
+	//页面缩放事件
+	$(window).on("resize", function() {
+		
+		adapt_screen();
+		
+		
+	});
 });

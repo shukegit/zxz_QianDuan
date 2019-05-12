@@ -74,7 +74,7 @@
 	transition: background-image 1s; 
 }
 .main_img_next_btn:hover {
-	background-image:url(../img/箭头白.png);
+	background-image:url(../../img/箭头白.png);
 }
 /*联合化工程实验室*/
 .main_page_font {
@@ -106,18 +106,18 @@
 .third_div {
 	width: 100%;
 	height: 969px;
-	background-color: antiquewhite;
+	background-color: chartreuse;
+	opacity: 0.4;
 }
 .forth_div {
 	width: 100%;
 	height: 969px;
-	background-color: brown;
+	background-color:lightskyblue;
 }
 .fifth_div {
 	width: 100%;
 	height: 969px;
-	background-color: coral;
-	opacity: 0;
+	background-color: darkgrey;
 }
 
 
