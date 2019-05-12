@@ -21,8 +21,16 @@ $(function() {
 	/*
 	 * 设置首页图片、文字高度适应不同屏幕大小
 	 */	
+	var initHeight = $(window).height();
 	function adapt_screen() {		
 		var height = $(window).height();//浏览器显示内容的高度(从网址栏下面到开始菜单上面的部分)
+		var fontPriority = height;
+		//initHeight / 85 = fontpriority / x;//字体比例换算
+		//initHeitht / 100 = fontpriority / y;//导航栏高度比例换算
+		var x = 85 * fontPriority / initHeight;
+		var y = 100 * fontPriority / initHeight;
+		var z = 25 * fontPriority / initHeight;//导航栏字体
+		$(".tab").css("margin-top", height);//设置导航栏的位置
 		$(".main_page_background").css("height", height + "px");//调整背景图片
 		$(".main_page_content").css("height", height + "px");//调整遮罩层
 		$(".main_page_content").css("margin-top", "-" + height + "px");//调整遮罩层距离背景层的顶部距离
@@ -30,7 +38,20 @@ $(function() {
 		$(".main_img_next_btn").css("margin-top",height + "px");
 		height = Math.floor(height / 200) * 100
 		$(".main_page_font").css("margin-top", height + "px");//设置文字高度
-		$(".tab").css("margin-top", top);//设置导航栏的位置
+		$(".main_page_font").css("font-size", x);
+//		$(".tab_ul li").css("font-size", z);
+//		$(".tab_ul").css("width", "60%" * fontPriority / initHeight);
+		//五个栏目的高度
+		$(".first_div").css("height", fontPriority);
+		$(".second_div").css("height", fontPriority);
+		$(".third_div").css("height", fontPriority);
+		$(".forth_div").css("height", fontPriority);
+		$(".fifth_div").css("height", fontPriority);
+		
+		//导航栏的高度
+		$(".tab").css("height", y);
+		
+		
 	}
 	adapt_screen();
 	
@@ -53,7 +74,7 @@ $(function() {
  	 */
  	$(".tab_li01").click(function() {
 		/*跳转到第一个栏目所在的位置*/
-		$("html,body").animate({scrollTop:$(".first_div").offset().top + 1},1000);
+		$("html,body").animate({scrollTop:$(".first_div").offset().top - 99},1000);
  	});
  	$(".tab_li02").click(function() {
 		$("html,body").animate({scrollTop:$(".second_div").offset().top - 99},1000);
@@ -78,7 +99,7 @@ $(function() {
 	 */
 	$(".main_img_next_btn").click(function() {
  		/*滚动到指定位置*/
- 		$("html,body").animate({scrollTop:$(".first_div").offset().top},1000);
+ 		$("html,body").animate({scrollTop:$(".first_div").offset().top - 99},1000);
  	});
  	/*设置主页上的箭头延时两秒出现*/
 // 	setTimeout(function() {
