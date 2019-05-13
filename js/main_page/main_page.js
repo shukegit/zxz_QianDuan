@@ -6,12 +6,12 @@ $(function() {
 	 * */
 	function change_img() {
 		if(flag == true) {
-			$(".main_page_background").css("opacity", "0");
+			$(".main_page_background").css("opacity", "0.2");
     		$(".main_page_background").css("background-image", "url(img/main_background02.jpg)");
     		$(".main_page_background").animate({opacity : '1'}, 1000);
     		flag = false;
 		} else {
-			$(".main_page_background").css("opacity", "0");
+			$(".main_page_background").css("opacity", "0.2");
     		$(".main_page_background").css("background-image", "url(img/main_background01.jpg)");
     		$(".main_page_background").animate({opacity : '1'}, 1000);
     		flag = true;
@@ -87,6 +87,9 @@ $(function() {
  	});
  	$(".tab_li05").click(function() {
  		$("html,body").animate({scrollTop:$(".fifth_div").offset().top - 99},1000);
+ 	});
+ 	$(".tab_li06").click(function() {
+ 		$("html,body").animate({scrollTop:$(".tail_div").offset().top},1000);
  	});
  	$(".tab_li05").hover(function() {
  		$(".main_page_background").css("filter", "blur(1px)");
