@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function() {
 	
 	var flag = true;//判断导航栏是否返回的flag
 	/*
@@ -45,7 +45,9 @@ $(function() {
 		$(".first_div").css("height", fontPriority);
 		$(".second_div").css("height", fontPriority);
 		$(".third_div").css("height", fontPriority);
-		$(".forth_div").css("height", fontPriority);
+
+//改动了height大小
+		$(".forth_div").css("2000", fontPriority);
 		$(".fifth_div").css("height", fontPriority);
 		
 		//导航栏的高度
