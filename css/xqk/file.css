@@ -1,0 +1,126 @@
+#div1
+{
+	position: relative;
+	width: 650px;
+	height: 400px;
+	border: 1px solid black;
+	overflow:hidden;
+	margin: 20px auto;
+}
+#div1 #botton
+{
+	position:absolute;
+	bottom: 15px;
+	left: 50%;
+	margin-left: -85px;
+	color: white;
+	width: 180px;
+	height: 18px;
+	z-index: 2;
+	
+	line-height: 15px;
+}
+#botton span
+{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	font-size: 12px;
+	text-align: center;
+	background-color: gray;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+#botton span.on
+{
+	background-color:red;
+}
+#div2
+{
+	position: absolute;
+	width: 5200px;
+	height: 400px;
+	z-index: 1;
+}
+#div2 img
+{
+	width: 650px;
+	height:400px;
+	float: left;
+}
+#jianjietext2
+{
+	
+	width: 850px;
+	height: 120px;
+	margin-left: 20px;
+	margin-top: -30px;
+	
+}
+
+
+#jianjietext
+{
+	
+	width: 710px;
+	height: 120px;
+	margin-left: 150px;
+	margin-top: -100px;
+	
+}
+
+#logo
+{
+	width: 80px;
+	height: 80px;
+	margin-left: 50px;
+	
+	
+}
+#biaoti
+{
+	color: brown;
+
+	margin: auto;
+	width: 900px;
+	height: 90px;
+	font-family: "微软雅黑";
+	font-size: 30px;
+	
+	
+}
+#jianjie
+{
+	
+	color: white;
+	margin: auto;
+	width: 900px;
+	height: 200px;
+	margin-top: 10px;
+	
+	
+}
+#xuexi
+{
+	color: saddlebrown;
+	
+	margin: auto;
+	width: 900px;
+	height: 500px;
+	margin-top: 10px;
+	
+	
+}
+#location
+{
+	color: saddlebrown;
+	
+	margin: auto;
+	width: 900px;
+	height: 400px;
+	margin-top: 10px;
+	
+}
+

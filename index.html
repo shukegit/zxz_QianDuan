@@ -1,18 +1,24 @@
 ﻿<!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8" />
 
 		<title></title>
 		<link rel="stylesheet" href="css/main_page/main_page.css" />
-                                 <link rel="stylesheet" href="css/liucheng_page/liucheng_page.css" />
-		<script type="text/javascript" src="js/main_page/jquery-3.2.1.js" ></script>
-		<script type="text/javascript" src="js/main_page/jquery.scrollUp.js" ></script>
-		<script type="text/javascript" src="js/main_page/main_page.js" ></script>
+		<link rel="stylesheet" href="css/liucheng_page/liucheng_page.css" />
+		<link rel="stylesheet" href="css/management.css" />
+		<link rel="stylesheet" href="css/xqk/file.css" />
+		<script type="text/javascript" src="js/main_page/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="js/main_page/jquery.scrollUp.js"></script>
+		<script type="text/javascript" src="js/main_page/main_page.js"></script>
+		<script type="text/javascript" src="js/main_page/management.js"></script>
+		<script type="text/javascript" src="js/xqk/file.js" ></script>
 	</head>
-	<body>
-		
-		<!-- 负责居中，包括了首页导航栏和尾栏-->
+
+	<body onload="load()">
+
+		<!-- 负责居中-->
 		<div id="center">
 			<div id="tab" class="tab">
 				<ul class="tab_ul">
@@ -26,11 +32,10 @@
 			</div>
 			<!-- 点击返回最上方-->
 			<div id="goto_toppest"></div>
-			
-			
+
 			<!-- 背景页 -->
 			<div class="main_page_background">
-				
+
 			</div>
 			<!--遮罩层-->
 			<div class="main_page_content">
@@ -38,93 +43,222 @@
 				<div class="main_page_font">联合化工程实验室</div>
 			</div>
 			<!-- 导航栏-->
-			
-			<div class="first_div">第一栏：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-			<div class="second_div">第二栏：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
+
+			<div class="first_div">
+				<div id="management">
+					<div class="inner">
+						<div class="title">
+							管理制度
+							<p class="center">
+								你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好 你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+							</p>
+						</div>
+						<div class="content">
+							<div class="item" onmouseenter="getinto(1)" onmouseleave="getout(1)">
+								<figure>
+									<img alt="123" src="img/timg4.jpg" />
+									<figcaption id="figcaption1"></figcaption>
+								</figure>
+								<div class="down" id="system1">
+									制度一
+									<br>
+									<p>
+										你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好 你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好 你好你好你好你好你好你好你好你好
+									</p>
+								</div>
+							</div>
+							<div class="item" onmouseenter="getinto(2)" onmouseleave="getout(2)">
+								<figure>
+									<img alt="123" src="img/timg2.jpg" />
+									<figcaption id="figcaption2"></figcaption>
+								</figure>
+								<div class="down" id="system2">
+									制度二
+									<br>
+									<p>
+										你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+
+									</p>
+								</div>
+							</div>
+							<div class="item" onmouseenter="getinto(3)" onmouseleave="getout(3)">
+								<figure>
+									<img alt="123" src="img/timg3.jpg" />
+									<figcaption id="figcaption3"></figcaption>
+								</figure>
+								<div class="down" id="system3">
+									制度三
+									<br>
+									<p>
+										你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好 你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好
+									</p>
+								</div>
+							</div>
+							<div class="item " onmouseenter="getinto(4)" onmouseleave="getout(4)">
+								<figure>
+									<img alt="123" src="img/timg4.jpg" />
+									<figcaption id="figcaption4"></figcaption>
+								</figure>
+								<div class="down" id="system4">
+									制度四
+									<br>
+									<p>
+										你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好 你好你好你好你好你好你好你好
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="back">
+								<p>
+									你好你好你好你好你好你好
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="second_div" style="text-align: center;background-image: url(img/xqk/back.png);background-size: cover;background-repeat:no-repeat;">
+				<div id="biaoti">
+					<p>联合化工程实验室简介</p>
+				</div>
+
+				<div id="jianjie">
+					<div id="logo">
+						<img src="img/logo.jpg" width="80px" height="80px" />
+					</div>
+					<div id="jianjietext">
+						<p style="line-height: 30px;">
+							&nbsp;&nbsp;&nbsp;&nbsp;联合化工程实验室建立于2015年，是郑州臻郎信息技术有限公司和河南大学计算机与信息工程学院联合设立的一个工程化实验室，位于河南大学的曾宪梓楼6楼。该实验室是为了给学校培养更多的web工程方面的人才，有着完备的培养方案和专门学习的教室。实验室场地开阔，设备崭新，拥有着一</p>
+					</div>
+					<div id="jianjietext2">
+						<p style="line-height: 30px;">
+							&nbsp;&nbsp;&nbsp;&nbsp;流的人才和最新的电脑设备.实验室有着严格的规章制度，每天的出入都必须要签到。实验室环境整洁，座位排列有序，有空调和暖气。 在这里你可以从一个小白变成大佬，在这里你可以成为精英，实现你的梦想。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</p>
+					</div>
+				</div>
+
+				<div id="xuexi">
+					<p>学习环境</p>
+
+					<body>
+						<div id="div1" onmouseover="stop()" onmouseout="cont()">
+							<div id="div2" style="left:-650px;">
+								<img src="img/xqk/001.jpg">
+								<img src="img/xqk/001.jpg">
+								<img src="img/xqk/002.jpg">
+								<img src="img/xqk/003.jpg">
+								<img src="img/xqk/004.jpg">
+								<img src="img/xqk/005.jpg">
+								<img src="img/xqk/006.jpg">
+								<img src="img/xqk/001.jpg">
+							</div>
+							<div id="botton">
+								<span class="on" onclick="huan1()">1</span>
+								<span onclick="huan2()">2</span>
+								<span onclick="huan3()">3</span>
+								<span onclick="huan4()">4</span>
+								<span onclick="huan5()">5</span>
+								<span onclick="huan6()">6</span>
+
+							</div>
+						</div>
+				</div>
+				<div id="location">
+					<p>地理位置</p>
+					<div>
+						<img src="img/xqk/location.png" width="800px" height="340px" />
+
+					</div>
+				</div>
+			</div>
 			<div class="third_div">第三栏：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-                    <!--实验室建立流程-->			
-                           <div class="forth_div" style="background-image:url('img/liucheng_background.jpg');">
-                            <div class="build">
-                               <h1 align="center">实验室成立与发展</h1>
-			<div id="zbox">
-				<div class="process" style="height:500px;">		
-                <h3 align="center">实验室前期规划</h3>
-                                      <div class="picturehover">
-			        <p style="color:white;">
-				甲方：河南大学<br />
-				乙方：郑州臻朗信息技术有限公司<br />
-				          在互惠互利的前提下，一致同意共建联合实验室，并签订合同书达成如下协议:<br />
-				(1)双方共同选派人员参与实验室的科研和管理。实验室设负责人一名，由乙方派人担任；实验室管理人一名，由甲方派人担任。<br />
-				(2)甲方权利义务：<br />A、指定专门负责人对实验室进行管理、建设和运营。<br />
- B、派出项目人员到实验室专职或兼职，承担部分岗位的工作。<br />
- C、承担或参与承担科研和产品开发项目。<br />
- D、提供实验室必要设备<br />
- (3)乙方权利义务：<br />
- A.派出项目工程师到实验室专职或兼职，承担部分岗位的工作。<br />
- B.制定联合实验室培养方向以及培养计划。<br />
- C.学生基础知识培养，学生项目工程化能力培养。<br />
- D.项目顶层设计，项目任务分配，带领学生项目研发以及交付上线。<br />
- E.实验室运营长期规划。<br />
- F.为实验室争取获得省市级项目和国家级科技项目的支持。
-			</p></div>
+			<!--实验室建立流程-->
+			<div class="forth_div" style="background-image:url('img/liucheng_background.jpg');">
+				<div class="build">
+					<h1 align="center">实验室成立与发展</h1>
+					<div id="zbox">
+						<div class="process" style="height:500px;">
+							<h3 align="center">实验室前期规划</h3>
+							<div class="picturehover">
+								<p style="color:white;">
+									甲方：河南大学<br /> 乙方：郑州臻朗信息技术有限公司
+									<br /> 在互惠互利的前提下，一致同意共建联合实验室，并签订合同书达成如下协议:
+									<br /> (1)双方共同选派人员参与实验室的科研和管理。实验室设负责人一名，由乙方派人担任；实验室管理人一名，由甲方派人担任。
+									<br /> (2)甲方权利义务：
+									<br />A、指定专门负责人对实验室进行管理、建设和运营。<br /> B、派出项目人员到实验室专职或兼职，承担部分岗位的工作。
+									<br /> C、承担或参与承担科研和产品开发项目。
+									<br /> D、提供实验室必要设备
+									<br /> (3)乙方权利义务：
+									<br /> A.派出项目工程师到实验室专职或兼职，承担部分岗位的工作。
+									<br /> B.制定联合实验室培养方向以及培养计划。
+									<br /> C.学生基础知识培养，学生项目工程化能力培养。
+									<br /> D.项目顶层设计，项目任务分配，带领学生项目研发以及交付上线。
+									<br /> E.实验室运营长期规划。
+									<br /> F.为实验室争取获得省市级项目和国家级科技项目的支持。
+								</p>
+							</div>
+						</div>
+						<div class="process" style="height:700px;">
+							<h3 align="center">实验室人员分配</h3>
+							<div class="picturehover">
+								<p style="color:white;">
+									一、面试（问题）<br /> 自我介绍、
+									<br/> 课程安排、
+									<br/> 课程进度、
+									<br/> 有什么问题想问我的？
+									<br/> 二、 培训<br /> 1、实验室纪律学习
+									<br/> 2、公共基础培养（网页基础）
+									<br/> a)HTML5：2-3周，讲课3次，布置任务进行讲课内容独立训练
+									<br/> b)CSS3：2-3周，讲课2次，布置任务进行讲课内容独立训练
+									<br/> c)JavaScript：3周，讲课3次，布置任务进行讲课内容独立训练
+									<br/> d)公共基础大作业完成：1周
+									<br/> 3、实验室小组划分
+									<br/> 依据每个学生的个人情况以及兴趣爱好进行实验室小组划分，主要以学生自己选择为主。
+									<br/> 4、JAVA小组培训(ANDROID前期同JAVA一样)
+									<br/> a)Java基础培训、练习
+									<br/> b)数据库基础，数据库成熟框架培训、练习
+									<br/> c)J2EE培训、练习
+									<br/> d)JAVA成熟框架培训、练习
+									<br/> e)个人项目大作业训练
+									<br/> f)小团队项目大作业训练
+									<br/> 三、 工程化项目实施<br /> 培训完成后进行人员选拔分为2部分，第一部分：进入项目组，进行工程化项目的研发；
+									</br>
+									第二部分：进行新招收人员的培训，同时巩固加强自己对培训知识的理解掌握。
+								</p>
+							</div>
+						</div>
+						<div class="process" style="height:400px;">
+							<h3 align="center">实验室后期发展</h3>
+							<div class="picturehover">
+								<p style="color:white;">
+									一、实验室经营方向<br /> 　　认真审视实验室经营的优势和劣势、强项和弱项（SWOT）的基础上，对当前行业的竞争形势和趋势作出基本研判，将实验室年度的经营方针确定为：
+									<br/> 组建实验室软硬件环境，开展本科生培养、加强团队建设，关键项目攻坚研发，教师团队项目攻坚辅助，知识产权申报。
+									<br /> 二、实验室年度经营目标
+									<br /> 联合实验室现在处于创立初期，为保证联合实验室有序建立并运营，设立年度经营目标：
+									<br/> 1、组建联合实验室的软硬件环境，营造一个良好的工程化开发与学习的氛围，打造一个积极的学习环境。
+									<br/> 2、建立健全联合实验室的规章制度，引入公司化管理理念，保障联合实验室有规可循。
+									<br/> 3、建立完善的招生机制，做到公平合理。
+									<br/> 4、建立合理的培养机制，做到学有所用，所用至臻。
+									<br/> 5、计划进行学生核心团队培养30-50人，开展科研学术、软件工程、职业规划类讲座多场。
+									<br/> 6、辅助教师项目团队技术攻关3项以上。
+									<br/> 7、研发交付项目2项以上。
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="process" style="height:700px;">
-				<h3 align="center">实验室人员分配</h3>
- <div class="picturehover">
-				<p style="color:white;">
-					一、面试（问题）<br />
-自我介绍、<br/>
-课程安排、<br/>
-课程进度、<br/>
-有什么问题想问我的？<br/>
-二、 培训<br />
-1、实验室纪律学习<br/>
-2、公共基础培养（网页基础）<br/>
-a)HTML5：2-3周，讲课3次，布置任务进行讲课内容独立训练<br/>
-b)CSS3：2-3周，讲课2次，布置任务进行讲课内容独立训练<br/>
-c)JavaScript：3周，讲课3次，布置任务进行讲课内容独立训练<br/>
-d)公共基础大作业完成：1周<br/>
-3、实验室小组划分<br/>
-依据每个学生的个人情况以及兴趣爱好进行实验室小组划分，主要以学生自己选择为主。<br/>
-4、JAVA小组培训(ANDROID前期同JAVA一样)<br/>
-a)Java基础培训、练习<br/>
-b)数据库基础，数据库成熟框架培训、练习<br/>
-c)J2EE培训、练习<br/>
-d)JAVA成熟框架培训、练习<br/>
-e)个人项目大作业训练<br/>
-f)小团队项目大作业训练
-<br/>
-三、 工程化项目实施<br />
-       培训完成后进行人员选拔分为2部分，第一部分：进入项目组，进行工程化项目的研发；</br>
-第二部分：进行新招收人员的培训，同时巩固加强自己对培训知识的理解掌握。
-				</p>
-			</div></div>
-			<div class="process" style="height:400px;">
-				<h3 align="center">实验室后期发展</h3>
-                                       <div class="picturehover">
-				<p style="color:white;">
-					一、实验室经营方向<br />
-　　认真审视实验室经营的优势和劣势、强项和弱项（SWOT）的基础上，对当前行业的竞争形势和趋势作出基本研判，将实验室年度的经营方针确定为：<br/>
-组建实验室软硬件环境，开展本科生培养、加强团队建设，关键项目攻坚研发，教师团队项目攻坚辅助，知识产权申报。<br />
-二、实验室年度经营目标<br />
-	联合实验室现在处于创立初期，为保证联合实验室有序建立并运营，设立年度经营目标：<br/>
-1、组建联合实验室的软硬件环境，营造一个良好的工程化开发与学习的氛围，打造一个积极的学习环境。<br/>
-2、建立健全联合实验室的规章制度，引入公司化管理理念，保障联合实验室有规可循。<br/>
-3、建立完善的招生机制，做到公平合理。<br/>
-4、建立合理的培养机制，做到学有所用，所用至臻。<br/>
-5、计划进行学生核心团队培养30-50人，开展科研学术、软件工程、职业规划类讲座多场。<br/>
-6、辅助教师项目团队技术攻关3项以上。<br/>
-7、研发交付项目2项以上。
-				</p>
-			</div></div>
-			</div>
-                                                </div></div>
 			<div class="fifth_div">第五栏：xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
 			<!-- 尾部栏-->
 			<div class="tail_div">
 				<div class="tag_address_connection_div">
 					<ul class="tail_ul">
-						<li class="tail_ul_li"><div class="logo_div"><!--<img src="img/logo.jpg" style="height: 40px; width: 40px;">--></div></li>
+						<li class="tail_ul_li">
+							<div class="logo_div">
+								<!--<img src="img/logo.jpg" style="height: 40px; width: 40px;">--></div>
+						</li>
 						<li class="tail_ul_li">
 							<ul>
 								<li style="font-size: 20px;">地址</li>
@@ -145,8 +279,8 @@ f)小团队项目大作业训练
 					<div class="banQuan">河南大学联合化工程实验室</div>
 				</div>
 			</div>
-		</div>	
-	
-	
-	</body>
+		</div>
+
+		</body>
+
 </html>

@@ -1,5 +1,15 @@
 ﻿$(function() {
 	
+	
+	/*
+	 *首页图片模糊变化
+	 * */
+	$(".main_page_font").hover(function() {
+ 		$(".main_page_background").css("filter", "blur(2px)");
+ 	}, function() {
+ 		$(".main_page_background").css("filter", "blur(0px)");
+ 	});
+	
 	var flag = true;//判断导航栏是否返回的flag
 	/*
 	 * 首页切换图片
@@ -43,7 +53,7 @@
 //		$(".tab_ul").css("width", "60%" * fontPriority / initHeight);
 		//五个栏目的高度
 		$(".first_div").css("height", fontPriority);
-		$(".second_div").css("height", fontPriority);
+		$(".second_div").css("height", 1400);
 		$(".third_div").css("height", fontPriority);
 
 //改动了height大小
@@ -52,7 +62,7 @@
 		
 		//导航栏的高度
 		$(".tab").css("height", y);
-		
+//		
 		
 	}
 	adapt_screen();
@@ -93,11 +103,7 @@
  	$(".tab_li06").click(function() {
  		$("html,body").animate({scrollTop:$(".tail_div").offset().top},1000);
  	});
- 	$(".tab_li05").hover(function() {
- 		$(".main_page_background").css("filter", "blur(1px)");
- 	}, function() {
- 		$(".main_page_background").css("filter", "blur(0px)");
- 	});
+
  	
  	/* 
  	 * 设置点击主页上的箭头滑动到下一个栏目
@@ -117,14 +123,14 @@
  	var flagTab = false;
     $(window).on('scroll',function() {
     	//设置背景图片模糊
-    	if($(document).scrollTop() < 600) {
-    		var x = $(document).scrollTop() / 100 + 1;
-    		$(".main_page_background").css("filter", "blur(" + x + "px)");
-    	}
-    	if($(document).scrollTop() == 0) {
-    		$(".main_page_background").css("filter", "blur(0px)");
-    	}
-    	//设置标题栏
+//  	if($(document).scrollTop() < 600) {
+//  		var x = $(document).scrollTop() / 100 + 1;
+//  		$(".main_page_background").css("filter", "blur(" + x + "px)");
+//  	}
+//  	if($(document).scrollTop() == 0) {
+//  		$(".main_page_background").css("filter", "blur(0px)");
+//  	}
+    	//设置标题栏锁定
     	var height = $(window).height();
     	var x = $(document).scrollTop();
     	if(x > height) {

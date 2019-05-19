@@ -130,7 +130,7 @@
 	bottom: 0;
 	width: 100%;
 	/*border: 5px solid yellow;*/
-	border-top: 1px solid red;
+	border-top: 2px solid #F89C47;
 }
 .tag_address_connection_div {
 	width: 80%;
@@ -175,14 +175,14 @@
 
 .banQuan_div {
 	width: 100%;
-	background-color: red;
+	background-color:#F89C47;
 	/*border: 1px solid red;*/
 }
 .banQuan {
 	width: 13%;
 	margin: auto;
 	margin-top: 240px;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	color: black;
 }
 

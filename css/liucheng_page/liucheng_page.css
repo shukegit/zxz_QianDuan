@@ -1,53 +1,63 @@
 ﻿/*实验室建立流程*/
-.build{
-              width: 100%;
+
+.build {
+	width: 100%;
 }
- #zbox{
+
+#zbox {
 	padding: 30px;
 	width: 100%;
 	font-size: 18px;
 	font-weight: 300;
-                line-height: 30px;
+	line-height: 30px;
 }
-.build>h1{
-               padding-top:30px;
-	color:gray;
-	text-shadow:2px 2px white;
-	}
+
+.build>h1 {
+	padding-top: 30px;
+	color: gray;
+	text-shadow: 2px 2px white;
+}
+
 
 /*三个阶段*/
-.process{
-                position:relative;
-                align:center;
+
+.process {
+	position: relative;
+	align: center;
 	border: solid 2px gainsboro;
 	width: 90%;
 	padding: 20px;
 	margin: 15px;
 }
-.process>h3{
-     color:#E0F8E6;
-     text-shadow:2px 2px gray;
-     font-size:100px;
-     line-height:450px;
+
+.process>h3 {
+	color: #E0F8E6;
+	text-shadow: 2px 2px gray;
+	font-size: 100px;
+	line-height: 450px;
 }
 
+
 /*鼠标滑过显示具体内容*/
-.picturehover{
- position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 0;
-  top:18px;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: .5s ease;
+
+.picturehover {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	right: 0;
+	top: 18px;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
 }
-.process:hover .picturehover{
-height:100%;
-font-size:20px;
+
+.process:hover .picturehover {
+	height: 100%;
+	font-size: 20px;
 }
-.process:hover h3{
-font-size:20px;
-line-height:30px;
+
+.process:hover h3 {
+	font-size: 20px;
+	line-height: 30px;
 }
