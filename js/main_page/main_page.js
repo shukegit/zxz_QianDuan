@@ -34,6 +34,7 @@
 	var initHeight = $(window).height();
 	function adapt_screen() {		
 		var height = $(window).height();//浏览器显示内容的高度(从网址栏下面到开始菜单上面的部分)
+		var temp = height;
 		var fontPriority = height;
 		//initHeight / 85 = fontpriority / x;//字体比例换算
 		//initHeitht / 100 = fontpriority / y;//导航栏高度比例换算
@@ -44,15 +45,21 @@
 		$(".main_page_background").css("height", height + "px");//调整背景图片
 		$(".main_page_content").css("height", height + "px");//调整遮罩层
 		$(".main_page_content").css("margin-top", "-" + height + "px");//调整遮罩层距离背景层的顶部距离
-		height = Math.floor(height / 100) * 100; //设置首页按钮距离顶部的高度,取整
+		height = Math.floor(height / 100) * 95; //设置首页按钮距离顶部的高度,取整
 		$(".main_img_next_btn").css("margin-top",height + "px");
 		height = Math.floor(height / 200) * 100
 		$(".main_page_font").css("margin-top", height + "px");//设置文字高度
 		$(".main_page_font").css("font-size", x);
+		if(temp > 800) {
+			$(".main_page_font").css("width", "36%");//设置首页文字的居中百分比
+		} else {
+			$(".main_page_font").css("width", "45%");//设置首页文字的居中百分比
+		}
+		
 //		$(".tab_ul li").css("font-size", z);
 //		$(".tab_ul").css("width", "60%" * fontPriority / initHeight);
 		//五个栏目的高度
-		$(".first_div").css("height", fontPriority);
+		$(".first_div").css("height", 1000);
 		$(".second_div").css("height", 1400);
 		$(".third_div").css("height", fontPriority);
 
