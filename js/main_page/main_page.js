@@ -65,7 +65,7 @@
 
 //改动了height大小
 		$(".forth_div").css("2000", fontPriority);
-		$(".fifth_div").css("height", fontPriority);
+		$(".fifth_div").css("height", 1100);
 		
 		//导航栏的高度
 		$(".tab").css("height", y);
